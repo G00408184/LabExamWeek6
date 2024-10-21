@@ -21,11 +21,11 @@ public class Customer {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long customerId;
-    @NotBlank(message = "first name cannot be blank")
+    @NotBlank(message = "first name must not be empty")
     private String firstName;
-    @NotBlank(message = "first name cannot be blank")
+    @NotBlank(message = "last name must not be empty")
     private String lastName;
-    @Email(message = "incorrect format")
+    @Email(message = "Email must be valid")
     private String email;
     @Min(value = 18, message = "cannot be less than 18")
     private double dateOfBirth;
